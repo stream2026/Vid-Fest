@@ -45,12 +45,6 @@ const Register = ({ seed, setSeed }) => {
               type: "image/png",
               lastModified: Date.now(),
             });
-
-            console.log(file);
-            console.log(
-              process.env.REACT_APP_CLOUDINARY_NAME,
-              process.env.REACT_APP_UPLOAD_PRESET
-            );
             setImage(file);
           },
           "image/jpeg",
@@ -67,7 +61,6 @@ const Register = ({ seed, setSeed }) => {
   const submitRegisterHandler = async (e) => {
     setLoading(true);
     e.preventDefault();
-    console.log(username, password, email, confirmPassword);
     if (!username) {
       setError("Username must be provided");
       setLoading(false);
@@ -127,7 +120,6 @@ const Register = ({ seed, setSeed }) => {
       });
       const res = await response.json();
       setLoading(false);
-      console.log(res);
       const { token } = res;
       if (!token) {
         setError(res.message);
@@ -172,7 +164,6 @@ const Register = ({ seed, setSeed }) => {
       });
       const res = await response.json();
       setLoading(false);
-      console.log(res);
       const { token } = res;
       if (!token) {
         setError(res.message);

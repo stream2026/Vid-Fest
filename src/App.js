@@ -12,6 +12,7 @@ import CategoryPage from "./pages/CategoryPage";
 import FollowPage from "./pages/FollowPage";
 import SearchResults from "./pages/SearchResults";
 import Trending from "./pages/Trending";
+import PageNotFound from "./pages/PageNotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -47,6 +48,7 @@ const App = () => {
               <Route path="category/:category" element={<CategoryPage />} />
               <Route path=":id" element={<Vid />} />
             </Route>
+            <Route path="*" element={<PageNotFound/>}/>
           </Routes>
         </div>
       </div>

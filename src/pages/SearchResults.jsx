@@ -27,7 +27,6 @@ const SearchResults = () => {
         .then(async (response) => response.json())
         .then((data) => {
           setVidList(data.data);
-          console.log(data);
         })
         .catch((err) => console.log(err));
     }

@@ -32,6 +32,7 @@ const SliderComp = () => {
         setError(err.message);
         console.error(err);
       });
+
   }, []);
 
   if (error) {

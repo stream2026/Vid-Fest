@@ -182,7 +182,6 @@ const EditProfile = ({ setModal, modal }) => {
                   lastModified: Date.now(),
                 });
     
-                console.log(file);
                 setProfileImage(file);
               },
               "image/jpeg",
@@ -220,7 +219,6 @@ const EditProfile = ({ setModal, modal }) => {
                   lastModified: Date.now(),
                 });
     
-                console.log(file);
                 setCoverImage(file);
               },
               "image/jpeg",

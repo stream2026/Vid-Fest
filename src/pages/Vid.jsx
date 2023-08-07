@@ -34,7 +34,6 @@ const Vid = () => {
     })
     .then((res)=>res.json())
     .then(data=>{
-      console.log(data.uploadedBy?.username)
       setVid(data)
       setAuthor(data.uploadedBy)
       const category = data.category

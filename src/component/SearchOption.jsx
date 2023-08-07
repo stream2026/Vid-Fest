@@ -22,7 +22,6 @@ const SearchOption = ({ setSearchInp }) => {
       .then((data) => {
         // Assuming that the response data is an array of strings (video names)
         setOptions(data);
-        console.log(data);
       })
       .catch((error) => {
         console.error(error);

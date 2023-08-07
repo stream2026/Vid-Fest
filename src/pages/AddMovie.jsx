@@ -24,7 +24,6 @@ function AddMovie() {
 
   const handleUpload = async ()=>{
     setLoading(true)
-    console.log(videoName, videoDescription, thumbnail, category, video, pid, thumbnailPid)
     if(!videoName || !videoDescription || !thumbnail || !category || !video){
       setError("Please provide full data")
       setLoading(false)
@@ -50,7 +49,6 @@ function AddMovie() {
         })
       })
       const message = await res.json();
-      console.log(message)
       setLoading(false);
       navigate('/')
       

@@ -42,7 +42,6 @@ const Profile = () => {
       },
     });
     const data = await res.json();
-    console.log(data.message);
     localStorage.removeItem("token");
     navigate("/");
     navigate(0);
